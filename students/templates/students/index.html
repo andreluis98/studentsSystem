@@ -1,13 +1,13 @@
 {% extends "students/base.html" %}
 
 {% block body %}
-    <h3 class="m-4">All Students</h3>
+    <h3 class="m-4">Todos Alunos</h3>
     <div class="row">
         <div class="col-12">
             {% if students %}
             <div class="card border-primary ms-4 me-4 mb-4">
                 <div class="card-header">
-                    <i class="fa-solid fa-list fa-lg"></i> Student Records
+                    <i class="fa-solid fa-list fa-lg"></i> Registros de Alunos
                 </div>
                     <div class="card-body">
                         <p class="card-text">
@@ -15,13 +15,13 @@
                             <table class="table table-hover">
                               <thead>
                                 <tr>
-                                  <th scope="col">Student Number</th>
-                                  <th scope="col">First Name</th>
-                                  <th scope="col">Last Name</th>
+                                  <th scope="col">Matricula</th>
+                                  <th scope="col">Nome</th>
+                                  <th scope="col">Sobrenome</th>
                                   <th scope="col">Email</th>
-                                  <th scope="col">Field Of Student</th>
-                                  <th scope="col">GPA</th>
-                                  <th scope="col">Actions</th>
+                                  <th scope="col">Curso</th>
+                                  <th scope="col">Média</th>
+                                  <th scope="col">Ações</th>
                                 </tr>
                               </thead>
                               <tbody>
@@ -44,19 +44,19 @@
                                               <div class="modal-dialog" role="document">
                                                 <div class="modal-content">
                                                   <div class="modal-header">
-                                                    <h5 class="modal-title">Student: {{ student.first_name }} {{ student.last_name }}</h5>
+                                                    <h5 class="modal-title">Aluno: {{ student.first_name }} {{ student.last_name }}</h5>
                                                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
                                                       <span aria-hidden="true"></span>
                                                     </button>
                                                   </div>
                                                   <div class="modal-body">
                                                       <ul class="list-unstyled">
-                                                      <li>Student Number: <strong>{{ student.student_number }}</strong></li>
-                                                      <li>First Name: <strong>{{ student.first_name }}</strong></li>
-                                                      <li>Last Name: <strong>{{ student.last_name }}</strong></li>
+                                                      <li>Matricula: <strong>{{ student.student_number }}</strong></li>
+                                                      <li>Nome: <strong>{{ student.first_name }}</strong></li>
+                                                      <li>Sobrenome: <strong>{{ student.last_name }}</strong></li>
                                                       <li>Email: <strong>{{ student.email }}</strong></li>
-                                                      <li>Field Of Study: <strong>{{ student.field_of_study }}</strong></li>
-                                                      <li>GPA: <strong>{{ student.gpa }}</strong></li>
+                                                      <li>Curso: <strong>{{ student.field_of_study }}</strong></li>
+                                                      <li>Média: <strong>{{ student.gpa }}</strong></li>
                                                       </ul>
                                                   </div>
                                                   <div class="modal-footer">
@@ -85,7 +85,7 @@
                                                     </button>
                                                   </div>
                                                   <div class="modal-body">
-                                                      <p>Are you sure want to delete this student?</p>
+                                                      <p>Tem certeza de que deseja excluir este aluno?</p>
                                                   </div>
                                                   <div class="modal-footer">
                                                       <form action="{% url 'delete' student.id %}" method="POST">
@@ -107,7 +107,7 @@
                     </div>
             </div>
             {% else %}
-                <h5 class="alert alert-primary ms-4 me-4">No Students Records</h5>
+                <h5 class="alert alert-primary ms-4 me-4">Sem registros de alunos</h5>
             {% endif %}
 
         </div>

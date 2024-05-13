@@ -7,12 +7,12 @@ class StudentsForm(forms.ModelForm):
         model = Students
         fields = ['student_number', 'first_name', 'last_name', 'email', 'field_of_study', 'gpa']
         labels = {
-            'student_number': 'Student Number',
-            'first_name': 'First Name',
-            'last_name': 'Last Name',
+            'student_number': 'Matricula',
+            'first_name': 'Nome',
+            'last_name': 'Sobrenome',
             'email': 'Email',
-            'field_of_study': 'Field of Study',
-            'gpa': 'GPA',
+            'field_of_study': 'Curso',
+            'gpa': 'Media',
         }
 
         widgets = {
