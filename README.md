@@ -86,9 +86,3 @@ Contribuições são bem-vindas! Sinta-se à vontade para enviar um pull request
 #### Autor
 
 Seu nome Andre Morais.
-
-#### Licença
-
-Este projeto está licenciado sob a [Sua Licença].
-
----
